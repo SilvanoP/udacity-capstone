@@ -2,9 +2,9 @@ package com.udacity.animal;
 
 import android.support.test.runner.AndroidJUnit4;
 
-import com.udacity.animal.model.entities.AnimeResponse;
-import com.udacity.animal.model.entities.MangaResponse;
-import com.udacity.animal.model.network.MALAPIClient;
+import com.udacity.animal.data.entities.AnimeResponse;
+import com.udacity.animal.data.entities.MangaResponse;
+import com.udacity.animal.data.network.ServiceGenerator;
 
 import junit.framework.Assert;
 
@@ -21,7 +21,7 @@ public class MALAPITests {
     @Test
     public void searchAllAnimesTest() {
         try {
-            MALAPIClient service = new MALAPIClient(); // TODO this should be used with dagger
+            ServiceGenerator service = new ServiceGenerator(); // TODO this should be used with dagger
 
             Call<AnimeResponse> response = service.getService("proview", "88081461")
                     .searchAllAnime("Full metal");
@@ -40,7 +40,7 @@ public class MALAPITests {
     @Test
     public void searchAllMangasTest() {
         try {
-            MALAPIClient service = new MALAPIClient(); // TODO this should be used with dagger
+            ServiceGenerator service = new ServiceGenerator(); // TODO this should be used with dagger
 
             Call<MangaResponse> response = service.getService("proview", "88081461")
                     .searchAllManga("Full metal");

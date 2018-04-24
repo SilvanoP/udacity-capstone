@@ -1,9 +1,9 @@
-package com.udacity.animal.model.network;
+package com.udacity.animal.data.network;
 
-import com.udacity.animal.model.entities.AnimeResponse;
-import com.udacity.animal.model.entities.MangaResponse;
-import com.udacity.animal.model.entities.user.MyAnimeListResponse;
-import com.udacity.animal.model.entities.user.MyMangaListResponse;
+import com.udacity.animal.data.entities.AnimeResponse;
+import com.udacity.animal.data.entities.MangaResponse;
+import com.udacity.animal.data.entities.user.MyAnimeListResponse;
+import com.udacity.animal.data.entities.user.MyMangaListResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -14,6 +14,10 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface MALService {
+
+
+    @GET("api/account/verify_credentials.xml")
+    Call<Void> verfiyCredentials();
 
     @GET("/api/anime/search.xml")
     Call<AnimeResponse> searchAllAnime(

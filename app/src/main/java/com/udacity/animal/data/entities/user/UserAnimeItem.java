@@ -1,4 +1,4 @@
-package com.udacity.animal.model.entities.user;
+package com.udacity.animal.data.entities.user;
 
 import android.os.Parcel;
 import android.os.Parcelable;

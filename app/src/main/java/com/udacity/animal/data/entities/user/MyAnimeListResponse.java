@@ -1,4 +1,4 @@
-package com.udacity.animal.model.entities.user;
+package com.udacity.animal.data.entities.user;
 
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
@@ -11,7 +11,7 @@ public class MyAnimeListResponse {
 
     @Element(name = "myinfo", required = false)
     private UserAnime userAnime;
-    @ElementList(name = "myinfo", inline = true, required = false)
+    @ElementList(name = "anime", inline = true, required = false)
     private List<UserAnimeItem> userAnimeItens;
 
     // Required by SimpleXML

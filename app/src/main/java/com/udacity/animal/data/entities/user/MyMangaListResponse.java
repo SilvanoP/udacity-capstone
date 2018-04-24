@@ -1,4 +1,4 @@
-package com.udacity.animal.model.entities.user;
+package com.udacity.animal.data.entities.user;
 
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
