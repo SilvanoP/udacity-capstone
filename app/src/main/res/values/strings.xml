@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AniMAL</string>
+
+    <string name="google_sign_in">Sign In with Google</string>
+    <string name="image_description_logo">Site Logo</string>
+    <string name="login">Login"</string>
+    <string name="or">or</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
 </resources>
