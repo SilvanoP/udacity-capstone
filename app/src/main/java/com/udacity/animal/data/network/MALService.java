@@ -1,9 +1,9 @@
 package com.udacity.animal.data.network;
 
-import com.udacity.animal.data.entities.AnimeResponse;
-import com.udacity.animal.data.entities.MangaResponse;
-import com.udacity.animal.data.entities.user.MyAnimeListResponse;
-import com.udacity.animal.data.entities.user.MyMangaListResponse;
+import com.udacity.animal.data.entities.entries.AnimeResponse;
+import com.udacity.animal.data.entities.entries.MangaResponse;
+import com.udacity.animal.data.entities.user.AnimeListResponse;
+import com.udacity.animal.data.entities.user.MangaListResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -24,7 +24,7 @@ public interface MALService {
             @Query("q") String name);
 
     @GET("malappinfo.php")
-    Call<MyAnimeListResponse> getUserAnimes(
+    Call<AnimeListResponse> getUserAnimes(
             @Query("u") String username,
             @Query("type") String type);
 
@@ -50,7 +50,7 @@ public interface MALService {
             @Query("q") String name);
 
     @GET("malappinfo.php")
-    Call<MyMangaListResponse> getUserMangas(
+    Call<MangaListResponse> getUserMangas(
             @Query("u") String username,
             @Query("type") String type);
 

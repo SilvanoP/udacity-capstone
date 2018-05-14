@@ -12,8 +12,10 @@
     </style>
 
     <style name="AppNameStyle" parent="AppTheme">
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/colorPrimaryLight</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
 </resources>

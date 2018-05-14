@@ -1,47 +1,45 @@
-package com.udacity.animal.data.entities;
+package com.udacity.animal.data.entities.entries;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
 
 import java.util.Date;
 
-@Root(name = "entry")
-public class MangaEntry implements Parcelable {
+/**
+ * The entries are an automatic way for the SimpleXML to convert the xml response
+ * from the MAL api search to an object.
+ *
+ * There are two possible entries, AnimeEntry and MangaEntry.
+ */
+public abstract class BaseEntry implements Parcelable {
 
     @Element(required = false)
-    private Long id;
+    protected Long id;
     @Element(required = false)
-    private String title;
+    protected String title;
     @Element(required = false)
-    private Integer chapters;
+    protected Double score;
     @Element(required = false)
-    private Integer volumes;
+    protected String type;
     @Element(required = false)
-    private Double score;
-    @Element(required = false)
-    private String type;
-    @Element(required = false)
-    private String status;
+    protected String status;
     @Element(name = "start_date", required = false)
-    private Date startDate;
+    protected Date startDate;
     @Element(name = "end_date", required = false)
-    private Date endDate;
+    protected Date endDate;
     @Element(required = false)
-    private String synopsis;
+    protected String synopsis;
     @Element(name = "image", required = false)
-    private String imageUrl;
+    protected String imageUrl;
 
-    public MangaEntry() {
+    public BaseEntry() {
     }
 
-    public MangaEntry(Parcel in) {
+    public BaseEntry(Parcel in) {
         id = in.readLong();
         title = in.readString();
-        chapters = in.readInt();
-        volumes = in.readInt();
         score = in.readDouble();
         type = in.readString();
         status = in.readString();
@@ -65,22 +63,6 @@ public class MangaEntry implements Parcelable {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public Integer getChapters() {
-        return chapters;
-    }
-
-    public void setChapters(Integer chapters) {
-        this.chapters = chapters;
-    }
-
-    public Integer getVolumes() {
-        return volumes;
-    }
-
-    public void setVolumes(Integer volumes) {
-        this.volumes = volumes;
     }
 
     public Double getScore() {
@@ -139,7 +121,6 @@ public class MangaEntry implements Parcelable {
         this.imageUrl = imageUrl;
     }
 
-    @Override
     public int describeContents() {
         return 0;
     }
@@ -147,8 +128,6 @@ public class MangaEntry implements Parcelable {
     public void writeToParcel(Parcel dest, int i) {
         dest.writeLong(id);
         dest.writeString(title);
-        dest.writeInt(chapters);
-        dest.writeInt(volumes);
         dest.writeDouble(score);
         dest.writeString(type);
         dest.writeString(status);
@@ -157,16 +136,4 @@ public class MangaEntry implements Parcelable {
         dest.writeString(synopsis);
         dest.writeString(imageUrl);
     }
-
-    public static final Parcelable.Creator<MangaEntry> CREATOR = new Parcelable.Creator<MangaEntry>() {
-        @Override
-        public MangaEntry createFromParcel(Parcel source) {
-            return new MangaEntry(source);
-        }
-
-        @Override
-        public MangaEntry[] newArray(int size) {
-            return new MangaEntry[size];
-        }
-    };
 }

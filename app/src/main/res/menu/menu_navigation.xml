@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/menu_switch"
+        android:title="@string/menu_switch_anime"
+        />
+
+    <item
+        android:title="@string/menu_filters">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menu_current"
+                    android:title="@string/menu_current_watch"
+                    />
+
+                <item
+                    android:id="@+id/menu_completed"
+                    android:title="@string/menu_completed"
+                    />
+
+                <item
+                    android:id="@+id/menu_dropped"
+                    android:title="@string/menu_dropped"
+                    />
+
+                <item
+                    android:id="@+id/menu_plan_to"
+                    android:title="@string/menu_plan_watch"
+                    />
+            </group>
+        </menu>
+    </item>
+
+</menu>

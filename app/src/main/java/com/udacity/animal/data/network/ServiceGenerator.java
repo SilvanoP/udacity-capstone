@@ -28,7 +28,7 @@ public class ServiceGenerator {
                 .build();
     }
 
-    public static ServiceGenerator getINSTANCE() {
+    public static ServiceGenerator INSTANCE() {
         return INSTANCE;
     }
 

@@ -1,10 +1,15 @@
-package com.udacity.animal.data.entities;
+package com.udacity.animal.data.entities.entries;
+
+import com.udacity.animal.data.entities.entries.MangaEntry;
 
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
 import java.util.List;
 
+/**
+ * This is the response object when search anime is called.
+ */
 @Root(name = "manga")
 public class MangaResponse {
 

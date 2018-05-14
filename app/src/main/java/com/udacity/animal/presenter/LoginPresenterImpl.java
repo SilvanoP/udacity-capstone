@@ -1,6 +1,5 @@
 package com.udacity.animal.presenter;
 
-import com.udacity.animal.data.network.AuthorizationInterceptor;
 import com.udacity.animal.data.network.MALService;
 import com.udacity.animal.data.network.ServiceGenerator;
 
@@ -16,11 +15,11 @@ public class LoginPresenterImpl implements LoginPresenter {
 
     public LoginPresenterImpl(LoginPresenter.Callback callback) {
         this.callback = callback;
-        service = ServiceGenerator.getINSTANCE().getService();
+        service = ServiceGenerator.INSTANCE().getService();
     }
 
     public void refreshToken(String token) {
-        ServiceGenerator.getINSTANCE().refreshToken(token);
+        ServiceGenerator.INSTANCE().refreshToken(token);
     }
 
     @Override
@@ -43,6 +42,5 @@ public class LoginPresenterImpl implements LoginPresenter {
                 callback.onReceiveResultCredentials(false);
             }
         });
-
     }
 }

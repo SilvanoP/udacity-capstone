@@ -1,6 +1,5 @@
 package com.udacity.animal;
 
-import com.udacity.animal.data.entities.AnimeResponse;
 import com.udacity.animal.data.network.ServiceGenerator;
 
 import junit.framework.Assert;
@@ -20,7 +19,7 @@ public class NetworkCallTest {
 
     @Before
     public void setup() {
-        byte[] value = ("proview:88081461").getBytes();
+        byte[] value = ("proview:***").getBytes();
         String encoded = Base64.getEncoder().encodeToString(value);
         token = encoded.trim();
     }
@@ -28,25 +27,10 @@ public class NetworkCallTest {
     @Test
     public void verifyCredentials() {
         try {
-            ServiceGenerator service = new ServiceGenerator(token);
-            Call<GET> response = service.verifyCredentials();
+            ServiceGenerator service = ServiceGenerator.INSTANCE();
+            service.refreshToken(token);
+            Call<Void> response = service.getService().verfiyCredentials();
             Assert.assertEquals(200, response.execute().code());
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            Assert.fail();
-        } catch (NullPointerException ex) {
-            ex.printStackTrace();
-            Assert.fail("Nullpointer found: " + ex.getMessage());
-        }
-    }
-
-    @Test
-    public void searchAllAnimesTest() {
-        try {
-            ServiceGenerator service = new ServiceGenerator(token);
-            Call<AnimeResponse> response = service.serchAnimes("Full metal");
-            AnimeResponse ar = response.execute().body();
-            Assert.assertTrue("Entries less than 0", ar.getEntry().size() > 0);
         } catch (IOException ex) {
             ex.printStackTrace();
             Assert.fail();

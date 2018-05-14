@@ -3,8 +3,31 @@
 
     <string name="google_sign_in">Sign In with Google</string>
     <string name="image_description_logo">Site Logo</string>
-    <string name="login">Login"</string>
+    <string name="login">Login</string>
     <string name="or">or</string>
     <string name="password">Password</string>
     <string name="username">Username</string>
+
+    <!-- ACTION BAR -->
+    <string name="appbar_anime">Anime</string>
+    <string name="appbar_manga">Manga</string>
+    <string name="appbar_toogle_open">Open</string>
+    <string name="appbar_toogle_close">Close</string>
+
+    <!-- MENU-->
+    <string name="menu_completed">Completed</string>
+    <string name="menu_current_read">Reading</string>
+    <string name="menu_current_watch">Watching</string>
+    <string name="menu_dropped">Dropped</string>
+    <string name="menu_filters">Filters</string>
+    <string name="menu_plan_read">Plan to Read</string>
+    <string name="menu_plan_watch">Plan to Watch</string>
+    <string name="menu_switch_anime">Switch to Anime</string>
+    <string name="menu_switch_manga">Switch to Manga</string>
+
+    <!-- TOASTS -->
+    <string name="toast_empty_list">Sorry no items found.</string>
+    <string name="toast_login_missing_fields">Please fill username and password before proceeding</string>
+    <string name="login_successful">Login Successful</string>
+    <string name="login_denied">Wrong user name or password, please try again!</string>
 </resources>

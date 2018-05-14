@@ -7,7 +7,7 @@ import org.simpleframework.xml.Root;
 import java.util.List;
 
 @Root(name = "myanimelist")
-public class MyAnimeListResponse {
+public class AnimeListResponse extends BaseListResponse {
 
     @Element(name = "myinfo", required = false)
     private UserAnime userAnime;
@@ -15,7 +15,7 @@ public class MyAnimeListResponse {
     private List<UserAnimeItem> userAnimeItens;
 
     // Required by SimpleXML
-    public MyAnimeListResponse() {
+    public AnimeListResponse() {
     }
 
     public UserAnime getUserAnime() {
