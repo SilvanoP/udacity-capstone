@@ -2,4 +2,6 @@
 <resources>
     <integer name="edit_single_line">1</integer>
     <integer name="num_grid_columns">3</integer>
+    <integer name="max_rating">10</integer>
+    <integer name="num_starts">5</integer>
 </resources>

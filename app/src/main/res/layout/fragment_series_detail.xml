@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/series_detail_backdrop_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:src="@drawable/error_backdrop_image"
+                />
+
+            <TextView
+                android:id="@+id/series_detail_name_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_value"
+                android:textSize="@dimen/title_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/series_detail_backdrop_image"
+                tools:text="@string/tools_title" />
+
+            <TextView
+                android:id="@+id/series_detail_original_name_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_value"
+                android:layout_marginTop="@dimen/small_margin_value"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/default_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/series_detail_name_text"
+                tools:text="@string/tools_title" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/series_detail_poster_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_value"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/series_detail_poster_description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/series_detail_original_name_text"
+                tools:src="@drawable/error_loading_image" />
+
+            <TextView
+                android:id="@+id/series_detail_score_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_value"
+                android:text="@string/score"
+                style="@style/TextCategory"
+                app:layout_constraintStart_toEndOf="@+id/series_detail_poster_image"
+                app:layout_constraintTop_toTopOf="@+id/series_detail_poster_image"
+                />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/series_detail_score_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_value"
+                android:layout_marginTop="@dimen/small_margin_value"
+                android:src="@drawable/ic_star"
+                app:layout_constraintStart_toEndOf="@id/series_detail_poster_image"
+                app:layout_constraintTop_toBottomOf="@+id/series_detail_score_title"
+                />
+
+            <TextView
+                android:id="@+id/series_detail_score_rating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/category_text_size"
+                app:layout_constraintStart_toEndOf="@+id/series_detail_score_image"
+                app:layout_constraintTop_toTopOf="@+id/series_detail_score_image"
+                app:layout_constraintBottom_toBottomOf="@+id/series_detail_score_image"
+                tools:text="@string/tools_rating_score" />
+
+            <TextView
+                android:id="@+id/series_detail_progress_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_value"
+                android:text="@string/episodes"
+                style="@style/TextCategory"
+                app:layout_constraintStart_toEndOf="@+id/series_detail_poster_image"
+                app:layout_constraintTop_toBottomOf="@+id/series_detail_score_rating_text"
+                />
+
+            <TextView
+                android:id="@+id/series_detail_progress_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin_value"
+                app:layout_constraintStart_toStartOf="@+id/series_detail_progress_title"
+                app:layout_constraintTop_toBottomOf="@+id/series_detail_progress_title"
+                tools:text="@string/tools_progress"
+                />
+
+            <TextView
+                android:id="@+id/series_detail_status_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_value"
+                android:text="@string/status"
+                style="@style/TextCategory"
+                app:layout_constraintStart_toEndOf="@+id/series_detail_poster_image"
+                app:layout_constraintTop_toBottomOf="@+id/series_detail_progress_number"
+                />
+
+            <TextView
+                android:id="@+id/series_detail_status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin_value"
+                app:layout_constraintStart_toStartOf="@+id/series_detail_status_title"
+                app:layout_constraintTop_toBottomOf="@+id/series_detail_status_title"
+                tools:text="@string/tools_status"
+                />
+
+            <!-- TextView
+                android:id="@+id/series_detail_release_date_text"
+                android:layout_marginStart="@dimen/default_margin_value"
+                android:layout_marginEnd="@dimen/default_margin_value"
+                android:layout_marginTop="@dimen/small_margin_value"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/series_detail_score_image"
+                app:layout_constraintStart_toEndOf="@+id/series_detail_poster_image"
+                tools:text="@string/release_date"
+                /-->
+
+            <TextView
+                android:id="@+id/series_detail_overview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_value"
+                android:text="@string/overview"
+                style="@style/TextCategory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/series_detail_poster_image" />
+
+            <TextView
+                android:id="@+id/series_detail_overview_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
+                android:layout_marginStart="@dimen/default_margin_value"
+                android:layout_marginEnd="@dimen/default_margin_value"
+                android:layout_marginTop="@dimen/small_margin_value"
+                android:textSize="@dimen/default_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/series_detail_overview_title"
+                tools:text="@string/overview" />
+
+        </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

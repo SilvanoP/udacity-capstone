@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/dialog_update_score_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin_value"
+        android:text="@string/score"
+        style="@style/TextCategory"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/dialog_update_score_seek"
+        android:layout_width="@dimen/no_dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin_value"
+        android:max="@integer/max_rating"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_update_score_title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_update_score_text"
+        />
+
+    <TextView
+        android:id="@+id/dialog_update_score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_margin_value"
+        app:layout_constraintTop_toTopOf="@+id/dialog_update_score_seek"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_update_score_seek"
+        app:layout_constraintStart_toEndOf="@+id/dialog_update_score_seek"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/tools_score"
+        />
+
+    <TextView
+        android:id="@+id/dialog_update_progress_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin_value"
+        android:text="@string/update_progress"
+        style="@style/TextCategory"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_update_score_seek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/dialog_update_progress_seek"
+        android:layout_width="@dimen/no_dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin_value"
+        android:max="@integer/max_rating"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_update_progress_title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_update_progress_text"
+        />
+
+    <TextView
+        android:id="@+id/dialog_update_progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_margin_value"
+        app:layout_constraintTop_toTopOf="@+id/dialog_update_progress_seek"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_update_progress_seek"
+        app:layout_constraintStart_toEndOf="@+id/dialog_update_progress_seek"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/tools_score"
+        />
+
+    <TextView
+        android:id="@+id/dialog_update_status_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin_value"
+        android:text="@string/status"
+        style="@style/TextCategory"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_update_progress_seek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/dialog_update_status_spinner"
+        android:layout_width="@dimen/spinner_default_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin_value"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_update_status_title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/dialog_update_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin_value"
+        android:text="@string/cancel"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_update_status_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_update_save_button"
+        />
+
+    <Button
+        android:id="@+id/dialog_update_save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin_value"
+        android:text="@string/save"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="@+id/dialog_update_cancel_button"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_update_cancel_button"
+        app:layout_constraintStart_toEndOf="@+id/dialog_update_cancel_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</android.support.constraint.ConstraintLayout>

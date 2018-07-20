@@ -1,12 +1,38 @@
 <resources>
     <string name="app_name">AniMAL</string>
 
+    <string name="cancel">Cancel</string>
+    <string name="chapters">Chapters</string>
+    <string name="completed">Completed</string>
+    <string name="didnt_read">Didn\'t Read</string>
+    <string name="didnt_watch">Didn\'t Watch</string>
+    <string name="dropped">Dropped</string>
+    <string name="email">E-mail</string>
+    <string name="episodes">Episodes</string>
     <string name="google_sign_in">Sign In with Google</string>
     <string name="image_description_logo">Site Logo</string>
+    <string name="image_description_poster">Poster</string>
     <string name="login">Login</string>
+    <string name="on_hold">On Hold</string>
     <string name="or">or</string>
+    <string name="overview">Overview</string>
     <string name="password">Password</string>
+    <string name="plan_to_read">Plan to Read</string>
+    <string name="plan_to_watch">Plan to Watch</string>
+    <string name="progress">Progress</string>
+    <string name="reading">reading</string>
+    <string name="release_date">Release Date</string>
+    <string name="save">Save</string>
+    <string name="score">Score</string>
+    <string name="search_anime">Search Anime</string>
+    <string name="search_manga">Search Manga</string>
+    <string name="series_detail_poster_description">Poster of the Series</string>
+    <string name="status">Status</string>
+    <string name="update_progress">Update Progress</string>
+    <string name="update_score">Update Score</string>
+    <string name="update_status">Update Status</string>
     <string name="username">Username</string>
+    <string name="watching">Watching</string>
 
     <!-- ACTION BAR -->
     <string name="appbar_anime">Anime</string>
@@ -15,19 +41,35 @@
     <string name="appbar_toogle_close">Close</string>
 
     <!-- MENU-->
+    <string name="menu_add_to_library">Add to Library</string>
+    <string name="menu_all">All</string>
     <string name="menu_completed">Completed</string>
-    <string name="menu_current_read">Reading</string>
-    <string name="menu_current_watch">Watching</string>
     <string name="menu_dropped">Dropped</string>
     <string name="menu_filters">Filters</string>
+    <string name="menu_in_progress">In Progress</string>
+    <string name="menu_on_hold">On Hold</string>
     <string name="menu_plan_read">Plan to Read</string>
     <string name="menu_plan_watch">Plan to Watch</string>
+    <string name="menu_remove_from_library">Remove from Library</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_sort_by_title">Sort by Title</string>
+    <string name="menu_sort_by_rating">Sort by Rating</string>
     <string name="menu_switch_anime">Switch to Anime</string>
     <string name="menu_switch_manga">Switch to Manga</string>
+    <string name="menu_update">Update Series</string>
 
     <!-- TOASTS -->
     <string name="toast_empty_list">Sorry no items found.</string>
-    <string name="toast_login_missing_fields">Please fill username and password before proceeding</string>
+    <string name="toast_login_missing_fields">Please fill username, e-mail and password before proceeding</string>
+
     <string name="login_successful">Login Successful</string>
     <string name="login_denied">Wrong user name or password, please try again!</string>
+
+    <!-- TOOLS TEXTS - These are only for the layout's Design Visualization on Android Studio -->
+    <string name="tools_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="tools_progress">10/25</string>
+    <string name="tools_rating_score">0.0</string>
+    <string name="tools_score">8</string>
+    <string name="tools_status">Watching</string>
+    <string name="tools_title">ANIME/MANGA TITLE</string>
 </resources>

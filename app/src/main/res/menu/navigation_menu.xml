@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_menu_switch"
+        android:title="@string/menu_switch_manga"
+        android:icon="@drawable/ic_switch"
+        />
+
+    <item
+        android:id="@+id/nav_menu_filters"
+        android:title="@string/menu_filters"
+        android:icon="@drawable/ic_filters"
+        >
+            <menu>
+                <item
+                    android:id="@+id/nav_menu_all"
+                    android:title="@string/menu_all"
+                    android:icon="@drawable/ic_list"
+                    />
+                <item
+                    android:id="@+id/nav_menu_completed"
+                    android:title="@string/menu_completed"
+                    android:icon="@drawable/ic_list"
+                    />
+                <item
+                    android:id="@+id/nav_menu_in_progress"
+                    android:title="@string/menu_in_progress"
+                    android:icon="@drawable/ic_list"
+                    />
+                <item
+                    android:id="@+id/nav_menu_on_hold"
+                    android:title="@string/menu_on_hold"
+                    android:icon="@drawable/ic_list"
+                    />
+                <item
+                    android:id="@+id/nav_menu_dropped"
+                    android:title="@string/menu_dropped"
+                    android:icon="@drawable/ic_list"
+                    />
+                <item
+                    android:id="@+id/nav_menu_planned"
+                    android:title="@string/menu_plan_watch"
+                    android:icon="@drawable/ic_list"
+                    />
+            </menu>
+    </item>
+
+</menu>
